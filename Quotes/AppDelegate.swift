@@ -15,8 +15,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+
+        initializeGA()
+        
         return true
+    }
+    
+    func application(application: UIApplication,
+        handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]?,
+        reply: (([NSObject : AnyObject]!) -> Void)!) {
+            
+            if let action = userInfo?["action"] as? String {
+                
+                if action == "GA" {
+                    
+                    sendGAScreenManually("Home Screen Watch")
+                    reply(["action" : "ga done"] as [NSObject : AnyObject])
+                }
+            }
     }
 
     func applicationWillResignActive(application: UIApplication) {
@@ -41,6 +57,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func initializeGA() {
+        
+        GAI.sharedInstance().trackUncaughtExceptions = true
+        GAI.sharedInstance().dispatchInterval = 20
+        GAI.sharedInstance().logger.logLevel = GAILogLevel.Verbose
+        GAI.sharedInstance().trackerWithTrackingId("UA-61262698-1")
+    }
+    
+    func sendGAScreenManually(screen: String) {
+        
+        var tracker:GAITracker = GAI.sharedInstance().defaultTracker as GAITracker
+        
+        tracker.allowIDFACollection = true
+        tracker.set(kGAIScreenName, value:screen)
+        tracker.send(GAIDictionaryBuilder.createScreenView().build() as [NSObject : AnyObject])
+    }
 
 }
 

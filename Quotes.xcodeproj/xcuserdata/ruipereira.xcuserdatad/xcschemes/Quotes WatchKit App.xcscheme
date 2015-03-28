@@ -77,8 +77,10 @@
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES"
       notificationPayloadFile = "Quotes WatchKit Extension/PushNotificationPayload.apns">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard"
+         RemotePath = "/Quotes">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "06FF0F661AC36094002E1B21"
@@ -86,7 +88,16 @@
             BlueprintName = "Quotes WatchKit App"
             ReferencedContainer = "container:Quotes.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "06FF0F661AC36094002E1B21"
+            BuildableName = "Quotes WatchKit App.app"
+            BlueprintName = "Quotes WatchKit App"
+            ReferencedContainer = "container:Quotes.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -112,7 +123,7 @@
       buildConfiguration = "Debug">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Debug"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

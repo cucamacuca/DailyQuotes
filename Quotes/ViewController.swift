@@ -8,16 +8,23 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: GAITrackedViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
     }
 
+    override  func viewWillAppear(animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        
+        self.screenName = "Home Screen iPhone"
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
 
 

@@ -10,7 +10,7 @@ import WatchKit
 import Foundation
 
 class InterfaceController: WKInterfaceController {
-
+    
     @IBOutlet weak var quoteLabel: WKInterfaceLabel!
     
     var network = NetworkManager()
@@ -18,11 +18,27 @@ class InterfaceController: WKInterfaceController {
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
-    }
+        var message : NSDictionary = ["action" : "GA"]
+        
+        NSLog("awakeWithContext")
+        
+        [WKInterfaceController .openParentApplication(message as! [String : String],
+            reply: { (reply, error) -> Void in
+                
+                if ((error) != nil) {
 
+                    NSLog("openParentApplication %@", error)
+                } else {
+                    NSLog("openParentApplication %@", reply)
+                }
+
+        })]
+    }
+    
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         NSLog("willActivate")
+
         network.request { (quotes) -> Void in
             
             let diceRoll = Int(arc4random_uniform(UInt32(quotes.count)))
@@ -32,10 +48,10 @@ class InterfaceController: WKInterfaceController {
         
         super.willActivate()
     }
-
+    
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-
+    
 }
