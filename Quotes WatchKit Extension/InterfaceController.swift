@@ -20,29 +20,31 @@ class InterfaceController: WKInterfaceController {
         
         var message : NSDictionary = ["action" : "GA"]
         
-        NSLog("awakeWithContext")
+        println("awakeWithContext")
         
-        [WKInterfaceController .openParentApplication(message as! [String : String],
+        [WKInterfaceController.openParentApplication(message as! [String : String],
             reply: { (reply, error) -> Void in
                 
                 if ((error) != nil) {
-
-                    NSLog("openParentApplication %@", error)
+                    
+                    println("openParentApplication %@", error)
+                    
                 } else {
-                    NSLog("openParentApplication %@", reply)
+                    
+                    println("openParentApplication %@", reply)
                 }
-
+                
         })]
     }
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
-        NSLog("willActivate")
+        println("willActivate")
 
         network.request { (quotes) -> Void in
             
             let diceRoll = Int(arc4random_uniform(UInt32(quotes.count)))
-            NSLog("%d", diceRoll)
+            println(diceRoll)
             self.quoteLabel.setText(quotes[diceRoll])
         }
         
