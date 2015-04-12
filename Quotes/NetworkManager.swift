@@ -15,7 +15,6 @@ let kBaseURL: String  = "http://www.reddit.com/r/quotes/top.json?sort=top"
 
 class NetworkManager: NSObject {
     
-    
     // MARK: Request
     
     func request(completionHandler: (quotes: Array<String>) -> Void) {
