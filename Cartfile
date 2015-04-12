@@ -1,1 +1,2 @@
-github "Alamofire/Alamofire" "xcode-6.3"
+github "Alamofire/Alamofire"
+github "ArtSabintsev/PrintlnMagic"

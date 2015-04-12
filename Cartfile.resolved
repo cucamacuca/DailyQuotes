@@ -1,1 +1,2 @@
-github "Alamofire/Alamofire" "6cffddcf150539daea674fa9367b63a1d46b0519"
+github "Alamofire/Alamofire" "1.2.0"
+github "ArtSabintsev/PrintlnMagic" "1.2.1"
