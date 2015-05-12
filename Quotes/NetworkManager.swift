@@ -14,7 +14,6 @@ let averageScore: UInt = 50
 
 class NetworkManager: NSObject {
     
-    
     // MARK: Request
     
     func request(completionHandler: (quotes: Array<String>, error: NSError?) -> Void) {

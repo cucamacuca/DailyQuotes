@@ -20,16 +20,18 @@ class InterfaceController: WKInterfaceController {
         
         var message : NSDictionary = ["action" : "GA"]
         
-        NSLog("awakeWithContext")
+        println("awakeWithContext")
         
-        [WKInterfaceController .openParentApplication(message as! [String : String],
+        [WKInterfaceController.openParentApplication(message as! [String : String],
             reply: { (reply, error) -> Void in
                 
                 if ((error) != nil) {
                     
-                    NSLog("openParentApplication %@", error)
+                    println("openParentApplication %@", error)
+                    
                 } else {
-                    NSLog("openParentApplication %@", reply)
+                    
+                    println("openParentApplication %@", reply)
                 }
                 
         })]
@@ -50,6 +52,8 @@ class InterfaceController: WKInterfaceController {
                 self.quoteLabel.setText(error?.localizedDescription)
             }
         }
+
+        println("willActivate")
         
         super.willActivate()
     }
