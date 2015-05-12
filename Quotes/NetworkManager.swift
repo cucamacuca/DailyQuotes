@@ -9,16 +9,15 @@
 import Foundation
 import Alamofire
 
-// base url returns the 1st pagination of goal lists
-
-let kBaseURL: String  = "http://www.reddit.com/r/quotes/top.json?sort=top"
+let kBaseURL: String = "http://www.reddit.com/r/quotes/top.json?sort=top"
+let averageScore: UInt = 50
 
 class NetworkManager: NSObject {
     
     
     // MARK: Request
     
-    func request(completionHandler: (quotes: Array<String>) -> Void) {
+    func request(completionHandler: (quotes: Array<String>, error: NSError?) -> Void) {
         
         Alamofire.request(.GET, kBaseURL, parameters: nil, encoding: .JSON)
             .responseJSON {(request, response, JSON, error) in
@@ -35,17 +34,25 @@ class NetworkManager: NSObject {
                                 
                                 if let dataInside = post["data"] as? Dictionary<String,AnyObject> {
                                     
-                                    if let title = dataInside["title"] as? String {
-                                    
-                                        quotes.append(title)
+                                    if let score = dataInside["score"] as? UInt {
+                                        
+                                        if score > averageScore {
+                                            
+                                            if let title = dataInside["title"] as? String {
+                                                
+                                                quotes.append(title)
+                                            }
+                                            
+                                        }
                                     }
+
                                 }
                             }
                         }
                     }
                 }
                 
-                completionHandler(quotes: quotes)
+                completionHandler(quotes: quotes, error: error)
             }
         }
 }

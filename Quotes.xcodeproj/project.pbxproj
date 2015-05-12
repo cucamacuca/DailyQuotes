@@ -18,6 +18,11 @@
 		067064531AC6AA680089E54B /* GA in Resources */ = {isa = PBXBuildFile; fileRef = 067064521AC6AA680089E54B /* GA */; };
 		06BEFEBA1AC75BF1009D78D6 /* libAdIdAccess.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06BEFEB81AC75BF1009D78D6 /* libAdIdAccess.a */; };
 		06BEFEBB1AC75BF1009D78D6 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06BEFEB91AC75BF1009D78D6 /* libGoogleAnalyticsServices.a */; };
+		06D37C931AD076A90056C9ED /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D37C921AD076A90056C9ED /* UIView+AutoLayout.swift */; };
+		06D37C951AD0780E0056C9ED /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D37C941AD0780E0056C9ED /* DataSource.swift */; };
+		06D37C971AD079DB0056C9ED /* CollectionDelegator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D37C961AD079DB0056C9ED /* CollectionDelegator.swift */; };
+		06D37C991AD07F730056C9ED /* UIColectionViewCellCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D37C981AD07F730056C9ED /* UIColectionViewCellCustom.swift */; };
+		06D37C9B1AD0AC1D0056C9ED /* UICollectionFlowLayoutCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D37C9A1AD0AC1D0056C9ED /* UICollectionFlowLayoutCustom.swift */; };
 		06E2971F1AC37815006F256B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E2971E1AC37815006F256B /* Alamofire.framework */; };
 		06E297201AC37815006F256B /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 06E2971E1AC37815006F256B /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		06FF0F351AC36066002E1B21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FF0F341AC36066002E1B21 /* AppDelegate.swift */; };
@@ -92,6 +97,11 @@
 		067064521AC6AA680089E54B /* GA */ = {isa = PBXFileReference; lastKnownFileType = folder; name = GA; path = Quotes/GA; sourceTree = "<group>"; };
 		06BEFEB81AC75BF1009D78D6 /* libAdIdAccess.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAdIdAccess.a; path = Quotes/GA/libAdIdAccess.a; sourceTree = "<group>"; };
 		06BEFEB91AC75BF1009D78D6 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = Quotes/GA/libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
+		06D37C921AD076A90056C9ED /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
+		06D37C941AD0780E0056C9ED /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		06D37C961AD079DB0056C9ED /* CollectionDelegator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionDelegator.swift; sourceTree = "<group>"; };
+		06D37C981AD07F730056C9ED /* UIColectionViewCellCustom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColectionViewCellCustom.swift; sourceTree = "<group>"; };
+		06D37C9A1AD0AC1D0056C9ED /* UICollectionFlowLayoutCustom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionFlowLayoutCustom.swift; sourceTree = "<group>"; };
 		06E297091AC36D93006F256B /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		06E2971E1AC37815006F256B /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		06FF0F2F1AC36066002E1B21 /* Quotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -188,6 +198,14 @@
 			name = Alamofire;
 			sourceTree = "<group>";
 		};
+		06D37C911AD076860056C9ED /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				06D37C921AD076A90056C9ED /* UIView+AutoLayout.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		06FF0F261AC36066002E1B21 = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +232,7 @@
 		06FF0F311AC36066002E1B21 /* Quotes */ = {
 			isa = PBXGroup;
 			children = (
+				06D37C911AD076860056C9ED /* Extensions */,
 				06647BB11AC5D1B10082DFAB /* GA */,
 				06E297091AC36D93006F256B /* NetworkManager.swift */,
 				06FF0F341AC36066002E1B21 /* AppDelegate.swift */,
@@ -222,6 +241,10 @@
 				06FF0F3B1AC36066002E1B21 /* Images.xcassets */,
 				06FF0F3D1AC36066002E1B21 /* LaunchScreen.xib */,
 				06FF0F321AC36066002E1B21 /* Supporting Files */,
+				06D37C941AD0780E0056C9ED /* DataSource.swift */,
+				06D37C961AD079DB0056C9ED /* CollectionDelegator.swift */,
+				06D37C981AD07F730056C9ED /* UIColectionViewCellCustom.swift */,
+				06D37C9A1AD0AC1D0056C9ED /* UICollectionFlowLayoutCustom.swift */,
 			);
 			path = Quotes;
 			sourceTree = "<group>";
@@ -383,9 +406,11 @@
 					};
 					06FF0F571AC36094002E1B21 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = 753Q5N89CP;
 					};
 					06FF0F661AC36094002E1B21 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = 753Q5N89CP;
 					};
 				};
 			};
@@ -454,8 +479,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06D37C9B1AD0AC1D0056C9ED /* UICollectionFlowLayoutCustom.swift in Sources */,
 				06647BAF1AC37FEF0082DFAB /* NetworkManager.swift in Sources */,
+				06D37C991AD07F730056C9ED /* UIColectionViewCellCustom.swift in Sources */,
+				06D37C931AD076A90056C9ED /* UIView+AutoLayout.swift in Sources */,
 				06FF0F371AC36066002E1B21 /* ViewController.swift in Sources */,
+				06D37C971AD079DB0056C9ED /* CollectionDelegator.swift in Sources */,
+				06D37C951AD0780E0056C9ED /* DataSource.swift in Sources */,
 				06FF0F351AC36066002E1B21 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -694,12 +724,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				IBSC_MODULE = Quotes_WatchKit_Extension;
 				INFOPLIST_FILE = "Quotes WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -711,8 +743,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				IBSC_MODULE = Quotes_WatchKit_Extension;
 				INFOPLIST_FILE = "Quotes WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -723,6 +757,7 @@
 		06FF0F7A1AC36095002E1B21 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -745,6 +780,7 @@
 		06FF0F7B1AC36095002E1B21 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",

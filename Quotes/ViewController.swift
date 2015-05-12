@@ -10,12 +10,40 @@ import UIKit
 
 class ViewController: GAITrackedViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    var collectionView: UICollectionView
+    var dataSource: DataSource?
+    var delegate: CollectionDelegator
+    var layout: UICollectionFlowLayoutCustom
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        
+        self.layout = UICollectionFlowLayoutCustom()
+        self.collectionView = UICollectionView(frame: CGRectZero, collectionViewLayout: self.layout)
+        self.delegate = CollectionDelegator()
+        
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
 
-    override  func viewWillAppear(animated: Bool) {
+    required init(coder aDecoder: NSCoder) {
+
+        self.layout = UICollectionFlowLayoutCustom()
+        self.collectionView = UICollectionView(frame: CGRectZero, collectionViewLayout: self.layout)
+        self.delegate = CollectionDelegator()
+        
+        super.init(coder: aDecoder)
+    }
+
+    override func viewDidLoad() {
+        
+        setupDataSource()
+        setupView()
+        setupCollectionView()
+        setupRequest()
+
+        super.viewDidLoad()
+    }
+
+    override func viewWillAppear(animated: Bool) {
         
         super.viewWillAppear(animated)
         
@@ -23,10 +51,61 @@ class ViewController: GAITrackedViewController {
     }
     
     override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
         
+        super.didReceiveMemoryWarning()
     }
-
-
+    
+    func setupView() {
+        
+        self.view.frame = UIScreen.mainScreen().bounds
+        self.view.addSubview(self.collectionView)
+    }
+    
+    func setupCollectionView() {
+        
+        self.registerClasses()
+        
+        self.view.setTranslatesAutoresizingMaskIntoConstraints(false)
+        
+        self.collectionView.backgroundColor = UIColor.blackColor()
+        self.collectionView.fillSuperview(UIEdgeInsetsZero)
+        self.collectionView.scrollEnabled = true
+        self.collectionView.showsHorizontalScrollIndicator = false
+        self.collectionView.delegate = self.delegate
+        self.collectionView.dataSource = self.dataSource
+        self.collectionView.pagingEnabled = true
+    }
+    
+    func setupDataSource() {
+        
+        self.dataSource = DataSource(
+            completionHandler: {
+                
+                (cell, item, indexPath) -> Void in
+                
+                cell.quote.text = item as? String
+        })
+    }
+    
+    func setupRequest() {
+        
+         NetworkManager().request { (quotes, error) -> Void in
+            
+            var items = quotes
+            
+            if error != nil && quotes.count == 0 {
+            
+                items.append(error!.localizedDescription)
+            }
+            
+            self.dataSource?.updateItems(items)
+            
+            self.collectionView.reloadData()
+        }
+    }
+    
+    func registerClasses() {
+        
+        self.collectionView.registerClass(UICollectionViewCellCustom.self,forCellWithReuseIdentifier:NSStringFromClass(UICollectionViewCellCustom.self))
+    }
 }
-

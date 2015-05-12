@@ -26,24 +26,29 @@ class InterfaceController: WKInterfaceController {
             reply: { (reply, error) -> Void in
                 
                 if ((error) != nil) {
-
+                    
                     NSLog("openParentApplication %@", error)
                 } else {
                     NSLog("openParentApplication %@", reply)
                 }
-
+                
         })]
     }
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         NSLog("willActivate")
-
-        network.request { (quotes) -> Void in
-            
-            let diceRoll = Int(arc4random_uniform(UInt32(quotes.count)))
-            NSLog("%d", diceRoll)
-            self.quoteLabel.setText(quotes[diceRoll])
+        
+        network.request { (quotes, error) -> Void in
+            if (quotes.count > 0) {
+                
+                let diceRoll = Int(arc4random_uniform(UInt32(quotes.count)))
+                NSLog("%d", diceRoll)
+                self.quoteLabel.setText(quotes[diceRoll])
+            } else {
+                
+                self.quoteLabel.setText(error?.localizedDescription)
+            }
         }
         
         super.willActivate()
