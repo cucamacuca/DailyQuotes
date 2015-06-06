@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]?,
         reply: (([NSObject : AnyObject]!) -> Void)!) {
             
+            // lets make a wrapper for this dictionary
             if let action = userInfo?["action"] as? String {
                 
                 if action == "GA" {

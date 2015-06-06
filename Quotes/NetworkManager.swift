@@ -23,6 +23,8 @@ class NetworkManager: NSObject {
                 
                 var quotes = [String]()
                 
+                /// this parse is really ugly.
+                
                 if let jsonResult = JSON as? Dictionary<String,AnyObject> {
                     
                     if let data = jsonResult["data"] as? Dictionary<String,AnyObject> {
