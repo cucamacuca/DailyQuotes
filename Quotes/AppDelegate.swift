@@ -12,11 +12,20 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var mainController: ViewController?
     var analytics: GoogleAnalytics?
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-
+        
+        self.window = UIWindow(frame: UIScreen .mainScreen().bounds)
+        self.window?.backgroundColor = UIColor.whiteColor()
+        self.window?.makeKeyAndVisible()
+        
         analytics = GoogleAnalytics()
+        
+        self.mainController = ViewController()
+        self.window?.rootViewController = self.mainController
+        
         return true
     }
     
