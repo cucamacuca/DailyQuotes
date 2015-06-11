@@ -13,12 +13,12 @@ typealias DataSourceHandler = ((cell: UICollectionViewCellCustom, item: AnyObjec
 class DataSource: NSObject, UICollectionViewDataSource {
     
     private var configurationHandler: DataSourceHandler
-    private var items: [String]
+    private var items: [AnyObject]
     
     init(completionHandler: DataSourceHandler) {
     
         self.configurationHandler = completionHandler
-        self.items = [String]()
+        self.items = [AnyObject]()
         super.init()
     }
     
@@ -47,7 +47,7 @@ class DataSource: NSObject, UICollectionViewDataSource {
         return 1
     }
     
-    func updateItems(items: [String]) {
+    func updateItems(items: [AnyObject]) {
         
         self.items = items
     }

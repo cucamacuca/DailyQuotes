@@ -13,7 +13,7 @@ class InterfaceController: WKInterfaceController {
     
     @IBOutlet weak var quoteLabel: WKInterfaceLabel!
     
-    var network = NetworkManager()
+    var reddit = RedditProvider()
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
@@ -41,12 +41,12 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is about to be visible to user
         NSLog("willActivate")
         
-        network.request { (quotes, error) -> Void in
+        reddit.request { (quotes, error) -> Void in
             if (quotes.count > 0) {
                 
                 let diceRoll = Int(arc4random_uniform(UInt32(quotes.count)))
                 NSLog("%d", diceRoll)
-                self.quoteLabel.setText(quotes[diceRoll])
+                self.quoteLabel.setText(quotes[diceRoll].title)
             } else {
                 
                 self.quoteLabel.setText(error?.localizedDescription)

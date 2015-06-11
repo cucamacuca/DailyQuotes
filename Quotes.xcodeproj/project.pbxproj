@@ -7,10 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06647BAC1AC37AB60082DFAB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E297091AC36D93006F256B /* NetworkManager.swift */; };
+		064847F71B27683400DBAE42 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 064847F61B27683400DBAE42 /* SwiftyJSON.framework */; };
+		064847F81B27683400DBAE42 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 064847F61B27683400DBAE42 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		064847FE1B299AEF00DBAE42 /* QuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064847FD1B299AEF00DBAE42 /* QuoteModel.swift */; };
+		064848001B299B2C00DBAE42 /* GoogleAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064847FF1B299B2C00DBAE42 /* GoogleAnalytics.swift */; };
+		064848051B29C58500DBAE42 /* RedditParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064848041B29C58500DBAE42 /* RedditParser.swift */; };
+		064848061B29EC2300DBAE42 /* RedditParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064848041B29C58500DBAE42 /* RedditParser.swift */; };
+		064848071B29EC2500DBAE42 /* RedditParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064848041B29C58500DBAE42 /* RedditParser.swift */; };
+		064848081B29EE3500DBAE42 /* QuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064847FD1B299AEF00DBAE42 /* QuoteModel.swift */; };
+		064848091B29EE3600DBAE42 /* QuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064847FD1B299AEF00DBAE42 /* QuoteModel.swift */; };
+		06647BAC1AC37AB60082DFAB /* RedditProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E297091AC36D93006F256B /* RedditProvider.swift */; };
 		06647BAD1AC37AC60082DFAB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E2971E1AC37815006F256B /* Alamofire.framework */; };
 		06647BAE1AC37D070082DFAB /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FF0F5D1AC36094002E1B21 /* InterfaceController.swift */; };
-		06647BAF1AC37FEF0082DFAB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E297091AC36D93006F256B /* NetworkManager.swift */; };
+		06647BAF1AC37FEF0082DFAB /* RedditProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E297091AC36D93006F256B /* RedditProvider.swift */; };
 		06647BC11AC5D28C0082DFAB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06647BC01AC5D28C0082DFAB /* CoreData.framework */; };
 		06647BC31AC5D2970082DFAB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06647BC21AC5D2970082DFAB /* SystemConfiguration.framework */; };
 		06647BC51AC5D2A20082DFAB /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 06647BC41AC5D2A20082DFAB /* libz.dylib */; };
@@ -20,7 +29,6 @@
 		06BEFEBB1AC75BF1009D78D6 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06BEFEB91AC75BF1009D78D6 /* libGoogleAnalyticsServices.a */; };
 		06D37C931AD076A90056C9ED /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D37C921AD076A90056C9ED /* UIView+AutoLayout.swift */; };
 		06D37C951AD0780E0056C9ED /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D37C941AD0780E0056C9ED /* DataSource.swift */; };
-		06D37C971AD079DB0056C9ED /* CollectionDelegator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D37C961AD079DB0056C9ED /* CollectionDelegator.swift */; };
 		06D37C991AD07F730056C9ED /* UIColectionViewCellCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D37C981AD07F730056C9ED /* UIColectionViewCellCustom.swift */; };
 		06D37C9B1AD0AC1D0056C9ED /* UICollectionFlowLayoutCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D37C9A1AD0AC1D0056C9ED /* UICollectionFlowLayoutCustom.swift */; };
 		06E2971F1AC37815006F256B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E2971E1AC37815006F256B /* Alamofire.framework */; };
@@ -71,6 +79,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				064847F81B27683400DBAE42 /* SwiftyJSON.framework in Embed Frameworks */,
 				06E297201AC37815006F256B /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -90,6 +99,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		064847F61B27683400DBAE42 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		064847FD1B299AEF00DBAE42 /* QuoteModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteModel.swift; sourceTree = "<group>"; };
+		064847FF1B299B2C00DBAE42 /* GoogleAnalytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAnalytics.swift; sourceTree = "<group>"; };
+		064848041B29C58500DBAE42 /* RedditParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedditParser.swift; sourceTree = "<group>"; };
 		06647BC01AC5D28C0082DFAB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		06647BC21AC5D2970082DFAB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		06647BC41AC5D2A20082DFAB /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -99,10 +112,9 @@
 		06BEFEB91AC75BF1009D78D6 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = Quotes/GA/libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		06D37C921AD076A90056C9ED /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
 		06D37C941AD0780E0056C9ED /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
-		06D37C961AD079DB0056C9ED /* CollectionDelegator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionDelegator.swift; sourceTree = "<group>"; };
 		06D37C981AD07F730056C9ED /* UIColectionViewCellCustom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColectionViewCellCustom.swift; sourceTree = "<group>"; };
 		06D37C9A1AD0AC1D0056C9ED /* UICollectionFlowLayoutCustom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionFlowLayoutCustom.swift; sourceTree = "<group>"; };
-		06E297091AC36D93006F256B /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		06E297091AC36D93006F256B /* RedditProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedditProvider.swift; sourceTree = "<group>"; };
 		06E2971E1AC37815006F256B /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		06FF0F2F1AC36066002E1B21 /* Quotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06FF0F331AC36066002E1B21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -132,6 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				064847F71B27683400DBAE42 /* SwiftyJSON.framework in Frameworks */,
 				06BEFEBA1AC75BF1009D78D6 /* libAdIdAccess.a in Frameworks */,
 				06BEFEBB1AC75BF1009D78D6 /* libGoogleAnalyticsServices.a in Frameworks */,
 				06647BC71AC5D2B80082DFAB /* libsqlite3.dylib in Frameworks */,
@@ -160,9 +173,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		062BDEF81B29F24500B7F3F8 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				06D37C941AD0780E0056C9ED /* DataSource.swift */,
+			);
+			name = DataSource;
+			sourceTree = "<group>";
+		};
+		064847F91B299A4F00DBAE42 /* RedditParser */ = {
+			isa = PBXGroup;
+			children = (
+				064848041B29C58500DBAE42 /* RedditParser.swift */,
+			);
+			name = RedditParser;
+			sourceTree = "<group>";
+		};
+		064847FC1B299AC600DBAE42 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				064847FD1B299AEF00DBAE42 /* QuoteModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		064848011B299B6A00DBAE42 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				06D37C981AD07F730056C9ED /* UIColectionViewCellCustom.swift */,
+				06D37C9A1AD0AC1D0056C9ED /* UICollectionFlowLayoutCustom.swift */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		064848021B299BBE00DBAE42 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				06E297091AC36D93006F256B /* RedditProvider.swift */,
+			);
+			name = Providers;
+			sourceTree = "<group>";
+		};
+		064848031B299BD600DBAE42 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				06FF0F361AC36066002E1B21 /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		06647BB11AC5D1B10082DFAB /* GA */ = {
 			isa = PBXGroup;
 			children = (
+				064847FF1B299B2C00DBAE42 /* GoogleAnalytics.swift */,
 			);
 			name = GA;
 			sourceTree = "<group>";
@@ -209,6 +272,7 @@
 		06FF0F261AC36066002E1B21 = {
 			isa = PBXGroup;
 			children = (
+				064847F61B27683400DBAE42 /* SwiftyJSON.framework */,
 				06647BB41AC5D1EF0082DFAB /* Frameworks */,
 				06FF0F311AC36066002E1B21 /* Quotes */,
 				06FF0F471AC36066002E1B21 /* QuotesTests */,
@@ -232,19 +296,19 @@
 		06FF0F311AC36066002E1B21 /* Quotes */ = {
 			isa = PBXGroup;
 			children = (
+				062BDEF81B29F24500B7F3F8 /* DataSource */,
+				064848031B299BD600DBAE42 /* Controllers */,
+				064848021B299BBE00DBAE42 /* Providers */,
+				064848011B299B6A00DBAE42 /* UI */,
+				064847FC1B299AC600DBAE42 /* Model */,
+				064847F91B299A4F00DBAE42 /* RedditParser */,
 				06D37C911AD076860056C9ED /* Extensions */,
 				06647BB11AC5D1B10082DFAB /* GA */,
-				06E297091AC36D93006F256B /* NetworkManager.swift */,
 				06FF0F341AC36066002E1B21 /* AppDelegate.swift */,
-				06FF0F361AC36066002E1B21 /* ViewController.swift */,
 				06FF0F381AC36066002E1B21 /* Main.storyboard */,
 				06FF0F3B1AC36066002E1B21 /* Images.xcassets */,
 				06FF0F3D1AC36066002E1B21 /* LaunchScreen.xib */,
 				06FF0F321AC36066002E1B21 /* Supporting Files */,
-				06D37C941AD0780E0056C9ED /* DataSource.swift */,
-				06D37C961AD079DB0056C9ED /* CollectionDelegator.swift */,
-				06D37C981AD07F730056C9ED /* UIColectionViewCellCustom.swift */,
-				06D37C9A1AD0AC1D0056C9ED /* UICollectionFlowLayoutCustom.swift */,
 			);
 			path = Quotes;
 			sourceTree = "<group>";
@@ -479,13 +543,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				064847FE1B299AEF00DBAE42 /* QuoteModel.swift in Sources */,
 				06D37C9B1AD0AC1D0056C9ED /* UICollectionFlowLayoutCustom.swift in Sources */,
-				06647BAF1AC37FEF0082DFAB /* NetworkManager.swift in Sources */,
+				06647BAF1AC37FEF0082DFAB /* RedditProvider.swift in Sources */,
 				06D37C991AD07F730056C9ED /* UIColectionViewCellCustom.swift in Sources */,
 				06D37C931AD076A90056C9ED /* UIView+AutoLayout.swift in Sources */,
 				06FF0F371AC36066002E1B21 /* ViewController.swift in Sources */,
-				06D37C971AD079DB0056C9ED /* CollectionDelegator.swift in Sources */,
+				064848001B299B2C00DBAE42 /* GoogleAnalytics.swift in Sources */,
 				06D37C951AD0780E0056C9ED /* DataSource.swift in Sources */,
+				064848051B29C58500DBAE42 /* RedditParser.swift in Sources */,
 				06FF0F351AC36066002E1B21 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,6 +560,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				064848081B29EE3500DBAE42 /* QuoteModel.swift in Sources */,
+				064848061B29EC2300DBAE42 /* RedditParser.swift in Sources */,
 				06FF0F4B1AC36066002E1B21 /* QuotesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,9 +570,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06647BAC1AC37AB60082DFAB /* NetworkManager.swift in Sources */,
+				064848091B29EE3600DBAE42 /* QuoteModel.swift in Sources */,
+				06647BAC1AC37AB60082DFAB /* RedditProvider.swift in Sources */,
 				06647BAE1AC37D070082DFAB /* InterfaceController.swift in Sources */,
 				06FF0F601AC36094002E1B21 /* NotificationController.swift in Sources */,
+				064848071B29EC2500DBAE42 /* RedditParser.swift in Sources */,
 				06FF0F621AC36094002E1B21 /* GlanceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -662,7 +732,7 @@
 					"$(PROJECT_DIR)/Quotes/GA",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "dd8cf02e-6e05-497f-8845-34ce66f4cebd";
+				PROVISIONING_PROFILE = "4257e44a-74e5-40b2-8e14-12c31ec3faf1";
 				SWIFT_OBJC_BRIDGING_HEADER = "Quotes/GA/GA-Bridging-Header.h";
 			};
 			name = Debug;
@@ -687,7 +757,7 @@
 					"$(PROJECT_DIR)/Quotes/GA",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "dd8cf02e-6e05-497f-8845-34ce66f4cebd";
+				PROVISIONING_PROFILE = "4257e44a-74e5-40b2-8e14-12c31ec3faf1";
 				SWIFT_OBJC_BRIDGING_HEADER = "Quotes/GA/GA-Bridging-Header.h";
 			};
 			name = Release;
@@ -740,7 +810,7 @@
 				INFOPLIST_FILE = "Quotes WatchKit App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "08283020-88c1-48ad-bd08-e564795f9664";
+				PROVISIONING_PROFILE = "4257e44a-74e5-40b2-8e14-12c31ec3faf1";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
@@ -757,7 +827,7 @@
 				INFOPLIST_FILE = "Quotes WatchKit App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "08283020-88c1-48ad-bd08-e564795f9664";
+				PROVISIONING_PROFILE = "4257e44a-74e5-40b2-8e14-12c31ec3faf1";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
@@ -784,7 +854,7 @@
 					"$(PROJECT_DIR)/Quotes/GA",
 				);
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "08283020-88c1-48ad-bd08-e564795f9664";
+				PROVISIONING_PROFILE = "4257e44a-74e5-40b2-8e14-12c31ec3faf1";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -805,7 +875,7 @@
 					"$(PROJECT_DIR)/Quotes/GA",
 				);
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "08283020-88c1-48ad-bd08-e564795f9664";
+				PROVISIONING_PROFILE = "4257e44a-74e5-40b2-8e14-12c31ec3faf1";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

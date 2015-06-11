@@ -12,14 +12,12 @@ class ViewController: GAITrackedViewController {
 
     var collectionView: UICollectionView
     var dataSource: DataSource?
-    var delegate: CollectionDelegator
     var layout: UICollectionFlowLayoutCustom
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         
         self.layout = UICollectionFlowLayoutCustom()
         self.collectionView = UICollectionView(frame: CGRectZero, collectionViewLayout: self.layout)
-        self.delegate = CollectionDelegator()
         
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
@@ -28,7 +26,6 @@ class ViewController: GAITrackedViewController {
 
         self.layout = UICollectionFlowLayoutCustom()
         self.collectionView = UICollectionView(frame: CGRectZero, collectionViewLayout: self.layout)
-        self.delegate = CollectionDelegator()
         
         super.init(coder: aDecoder)
     }
@@ -71,7 +68,6 @@ class ViewController: GAITrackedViewController {
         self.collectionView.fillSuperview(UIEdgeInsetsZero)
         self.collectionView.scrollEnabled = true
         self.collectionView.showsHorizontalScrollIndicator = false
-        self.collectionView.delegate = self.delegate
         self.collectionView.dataSource = self.dataSource
         self.collectionView.pagingEnabled = true
     }
@@ -83,19 +79,25 @@ class ViewController: GAITrackedViewController {
                 
                 (cell, item, indexPath) -> Void in
                 
-                cell.quote.text = item as? String
+                let quote = item as? QuoteModel
+                
+                cell.quote.text = quote?.title
         })
     }
     
     func setupRequest() {
         
-         NetworkManager().request { (quotes, error) -> Void in
+         RedditProvider().request { (quotes, error) -> Void in
             
             var items = quotes
             
             if error != nil && quotes.count == 0 {
             
-                items.append(error!.localizedDescription)
+                // create a fake quote
+                var errorQuote = QuoteModel()
+                errorQuote.title = error!.localizedDescription
+                
+                items.append(errorQuote)
             }
             
             self.dataSource?.updateItems(items)
