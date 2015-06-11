@@ -183,12 +183,27 @@
 			name = DataSource;
 			sourceTree = "<group>";
 		};
-		062BDEF91B29F45300B7F3F8 /* Constant */ = {
+		062BDEF91B29F45300B7F3F8 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
 				062BDEFA1B29F47900B7F3F8 /* Constant.swift */,
 			);
-			name = Constant;
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+		062BDF5F1B2A292B00B7F3F8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				062BDEF81B29F24500B7F3F8 /* DataSource */,
+				064848031B299BD600DBAE42 /* Controllers */,
+				064848021B299BBE00DBAE42 /* Providers */,
+				064848011B299B6A00DBAE42 /* UI */,
+				064847FC1B299AC600DBAE42 /* Model */,
+				064847F91B299A4F00DBAE42 /* RedditParser */,
+				06D37C911AD076860056C9ED /* Extensions */,
+				06647BB11AC5D1B10082DFAB /* GA */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 		064847F91B299A4F00DBAE42 /* RedditParser */ = {
@@ -306,15 +321,8 @@
 		06FF0F311AC36066002E1B21 /* Quotes */ = {
 			isa = PBXGroup;
 			children = (
-				062BDEF91B29F45300B7F3F8 /* Constant */,
-				062BDEF81B29F24500B7F3F8 /* DataSource */,
-				064848031B299BD600DBAE42 /* Controllers */,
-				064848021B299BBE00DBAE42 /* Providers */,
-				064848011B299B6A00DBAE42 /* UI */,
-				064847FC1B299AC600DBAE42 /* Model */,
-				064847F91B299A4F00DBAE42 /* RedditParser */,
-				06D37C911AD076860056C9ED /* Extensions */,
-				06647BB11AC5D1B10082DFAB /* GA */,
+				062BDEF91B29F45300B7F3F8 /* Configuration */,
+				062BDF5F1B2A292B00B7F3F8 /* Classes */,
 				06FF0F341AC36066002E1B21 /* AppDelegate.swift */,
 				06FF0F3B1AC36066002E1B21 /* Images.xcassets */,
 				06FF0F3D1AC36066002E1B21 /* LaunchScreen.xib */,

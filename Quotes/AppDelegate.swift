@@ -17,14 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        self.window = UIWindow(frame: UIScreen .mainScreen().bounds)
-        self.window?.backgroundColor = UIColor.whiteColor()
-        self.window?.makeKeyAndVisible()
+        // setup and configure frameworks
+        setupApp()
         
-        analytics = GoogleAnalytics()
-        
-        self.mainController = ViewController()
-        self.window?.rootViewController = self.mainController
+        // load the correct root view controller
+        loadRootViewController()
         
         return true
     }
@@ -65,6 +62,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func setupApp() {
+        
+        analytics = GoogleAnalytics()
+    }
+    
+    func loadRootViewController() {
+        
+        self.window = UIWindow(frame: UIScreen .mainScreen().bounds)
+        self.window?.makeKeyAndVisible()
+        
+        self.mainController = ViewController()
+        self.window?.rootViewController = self.mainController
     }
 }
 

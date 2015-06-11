@@ -12,12 +12,15 @@ import Foundation
 class UICollectionViewCellCustom: UICollectionViewCell {
     
     var quote: UILabel
+    let defaultFontName = "HelveticaNeue"
+    let defaultSizeFont: CGFloat = 40.0
+    let edgeInset: CGFloat = 30
 
     override init(frame: CGRect) {
         
         self.quote = UILabel(frame: CGRectZero)
         self.quote.textColor = UIColor.whiteColor()
-        self.quote.font = UIFont(name: "HelveticaNeue", size: CGFloat(40.0))
+        self.quote.font = UIFont(name: defaultFontName, size: defaultSizeFont)
         self.quote.textAlignment = NSTextAlignment.Center
         self.quote.numberOfLines = 0
         
@@ -30,7 +33,7 @@ class UICollectionViewCellCustom: UICollectionViewCell {
 
         self.quote = UILabel(frame: CGRectZero)
         self.quote.textColor = UIColor.whiteColor()
-        self.quote.font = UIFont(name: "HelveticaNeue", size: CGFloat(40.0))
+        self.quote.font = UIFont(name: defaultFontName, size: defaultSizeFont)
         self.quote.textAlignment = NSTextAlignment.Center
         self.quote.numberOfLines = 0
         
@@ -52,6 +55,6 @@ class UICollectionViewCellCustom: UICollectionViewCell {
         self.setTranslatesAutoresizingMaskIntoConstraints(false)
         self.quote.setTranslatesAutoresizingMaskIntoConstraints(false)
         
-        self.quote.fillSuperview(UIEdgeInsets(top: 0, left: 30.0, bottom: 0, right: -30.0))
+        self.quote.fillSuperview(UIEdgeInsets(top: 0, left: edgeInset, bottom: 0, right: -edgeInset))
     }
 }
