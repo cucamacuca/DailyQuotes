@@ -12,12 +12,11 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    var analytics: GoogleAnalytics?
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
-        initializeGA()
-        
+        analytics = GoogleAnalytics()
         return true
     }
     
@@ -30,7 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
                 if action == "GA" {
                     
-                    sendGAScreenManually("Home Screen Watch")
+                    analytics?.track(Constant.GA.homeWatchScreen)
+                    
                     reply(["action" : "ga done"] as [NSObject : AnyObject])
                 }
             }
@@ -57,23 +57,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-    func initializeGA() {
-        
-        GAI.sharedInstance().trackUncaughtExceptions = true
-        GAI.sharedInstance().dispatchInterval = 20
-        GAI.sharedInstance().logger.logLevel = GAILogLevel.Verbose
-        GAI.sharedInstance().trackerWithTrackingId("UA-61262698-1")
-    }
-    
-    func sendGAScreenManually(screen: String) {
-        
-        var tracker:GAITracker = GAI.sharedInstance().defaultTracker as GAITracker
-        
-        tracker.allowIDFACollection = true
-        tracker.set(kGAIScreenName, value:screen)
-        tracker.send(GAIDictionaryBuilder.createScreenView().build() as [NSObject : AnyObject])
-    }
-
 }
 

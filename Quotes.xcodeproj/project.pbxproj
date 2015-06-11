@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		062BDEFB1B29F47900B7F3F8 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062BDEFA1B29F47900B7F3F8 /* Constant.swift */; };
+		062BDEFC1B29FC9C00B7F3F8 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062BDEFA1B29F47900B7F3F8 /* Constant.swift */; };
+		062BDEFD1B29FC9C00B7F3F8 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062BDEFA1B29F47900B7F3F8 /* Constant.swift */; };
 		064847F71B27683400DBAE42 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 064847F61B27683400DBAE42 /* SwiftyJSON.framework */; };
 		064847F81B27683400DBAE42 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 064847F61B27683400DBAE42 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		064847FE1B299AEF00DBAE42 /* QuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064847FD1B299AEF00DBAE42 /* QuoteModel.swift */; };
@@ -99,6 +102,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		062BDEFA1B29F47900B7F3F8 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		064847F61B27683400DBAE42 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		064847FD1B299AEF00DBAE42 /* QuoteModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteModel.swift; sourceTree = "<group>"; };
 		064847FF1B299B2C00DBAE42 /* GoogleAnalytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAnalytics.swift; sourceTree = "<group>"; };
@@ -179,6 +183,14 @@
 				06D37C941AD0780E0056C9ED /* DataSource.swift */,
 			);
 			name = DataSource;
+			sourceTree = "<group>";
+		};
+		062BDEF91B29F45300B7F3F8 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				062BDEFA1B29F47900B7F3F8 /* Constant.swift */,
+			);
+			name = Constant;
 			sourceTree = "<group>";
 		};
 		064847F91B299A4F00DBAE42 /* RedditParser */ = {
@@ -296,6 +308,7 @@
 		06FF0F311AC36066002E1B21 /* Quotes */ = {
 			isa = PBXGroup;
 			children = (
+				062BDEF91B29F45300B7F3F8 /* Constant */,
 				062BDEF81B29F24500B7F3F8 /* DataSource */,
 				064848031B299BD600DBAE42 /* Controllers */,
 				064848021B299BBE00DBAE42 /* Providers */,
@@ -544,6 +557,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				064847FE1B299AEF00DBAE42 /* QuoteModel.swift in Sources */,
+				062BDEFB1B29F47900B7F3F8 /* Constant.swift in Sources */,
 				06D37C9B1AD0AC1D0056C9ED /* UICollectionFlowLayoutCustom.swift in Sources */,
 				06647BAF1AC37FEF0082DFAB /* RedditProvider.swift in Sources */,
 				06D37C991AD07F730056C9ED /* UIColectionViewCellCustom.swift in Sources */,
@@ -563,6 +577,7 @@
 				064848081B29EE3500DBAE42 /* QuoteModel.swift in Sources */,
 				064848061B29EC2300DBAE42 /* RedditParser.swift in Sources */,
 				06FF0F4B1AC36066002E1B21 /* QuotesTests.swift in Sources */,
+				062BDEFC1B29FC9C00B7F3F8 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,6 +585,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				062BDEFD1B29FC9C00B7F3F8 /* Constant.swift in Sources */,
 				064848091B29EE3600DBAE42 /* QuoteModel.swift in Sources */,
 				06647BAC1AC37AB60082DFAB /* RedditProvider.swift in Sources */,
 				06647BAE1AC37D070082DFAB /* InterfaceController.swift in Sources */,

@@ -1,4 +1,4 @@
-//
+ //
 //  RedditParser.swift
 //  Quotes
 //
@@ -23,7 +23,7 @@ class RedditParser {
             let score = subJson["data"]["score"].intValue
             let title = subJson["data"]["title"].string
             
-            if (score > averageScore && title != nil) {
+            if (score > Constant.Reddit.evaluationScore && title != nil) {
                 
                 var quote = QuoteModel()
                 quote.title = title!

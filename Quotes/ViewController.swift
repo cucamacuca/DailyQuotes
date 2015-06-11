@@ -44,7 +44,7 @@ class ViewController: GAITrackedViewController {
         
         super.viewWillAppear(animated)
         
-        self.screenName = "Home Screen iPhone"
+        self.screenName = Constant.GA.homeiPhoneScreen
     }
     
     override func didReceiveMemoryWarning() {

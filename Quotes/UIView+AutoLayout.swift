@@ -12,7 +12,6 @@ import UIKit
 
 extension UIView {
     
-    
     // MARK: Fill super view
     
     func fillSuperview(edges: UIEdgeInsets) -> [NSLayoutConstraint] {

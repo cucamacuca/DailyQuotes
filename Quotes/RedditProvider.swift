@@ -9,17 +9,13 @@
 import Foundation
 import Alamofire
 
-
-let kBaseURL: String = "http://www.reddit.com/r/quotes/top.json?sort=top"
-let averageScore: Int = 50
-
 class RedditProvider: NSObject {
     
     // MARK: Request the most awesome quotes on reddit
     
     func request(completionHandler: (quotes: Array<QuoteModel>, error: NSError?) -> Void) {
         
-        Alamofire.request(.GET, kBaseURL, parameters: nil, encoding: .JSON)
+        Alamofire.request(.GET, Constant.Reddit.URL, parameters: nil, encoding: .JSON)
             .responseJSON {(request, response, json, error) in
                 
                 var quotes = RedditParser.parserFromJSON(json)
