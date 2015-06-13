@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 class RedditProvider: NSObject {
     
@@ -18,9 +19,16 @@ class RedditProvider: NSObject {
         Alamofire.request(.GET, Constant.Reddit.URL, parameters: nil, encoding: .JSON)
             .responseJSON {(request, response, json, error) in
                 
-                var quotes = RedditParser.parserFromJSON(json)
+                var jsonObject: JSON?
+                
+                if json != nil {
+                    
+                    jsonObject = JSON(json!)
+                }
+                
+                var quotes = RedditParser.parserFromJSON(jsonObject)
                 
                 completionHandler(quotes: quotes, error: error)
-            }
         }
+    }
 }

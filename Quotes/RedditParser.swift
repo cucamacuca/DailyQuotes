@@ -11,32 +11,29 @@ import SwiftyJSON
 
 class RedditParser {
 
-    class func parserFromJSON(json: AnyObject?) -> Array<QuoteModel> {
+    class func parserFromJSON(json: JSON?) -> Array<QuoteModel> {
 
         var quotes = [QuoteModel]()
         
-        if json == nil || json?.error != nil {
+        if let jsonObj = json {
             
-            return quotes
-        }
-
-        var json = JSON(json!)
-        
-        let children = json["data"]["children"]
-        
-        for (index: String, subJson: JSON) in children {
+            let children = jsonObj["data"]["children"]
             
-            let score = subJson["data"]["score"].intValue
-            let title = subJson["data"]["title"].string
-            
-            if (score > Constant.Reddit.evaluationScore && title != nil) {
+            for (index: String, subJson: JSON) in children {
                 
-                var quote = QuoteModel()
-                quote.title = title!
-                quote.score = score
+                let score = subJson["data"]["score"].intValue
+                let title = subJson["data"]["title"].string
                 
-                quotes.append(quote)
+                if (score > Constant.Reddit.evaluationScore && title != nil) {
+                    
+                    var quote = QuoteModel()
+                    quote.title = title!
+                    quote.score = score
+                    
+                    quotes.append(quote)
+                }
             }
+            
         }
         
         return quotes
