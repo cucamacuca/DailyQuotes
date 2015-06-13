@@ -10,6 +10,18 @@
 		062BDEFB1B29F47900B7F3F8 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062BDEFA1B29F47900B7F3F8 /* Constant.swift */; };
 		062BDEFC1B29FC9C00B7F3F8 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062BDEFA1B29F47900B7F3F8 /* Constant.swift */; };
 		062BDEFD1B29FC9C00B7F3F8 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062BDEFA1B29F47900B7F3F8 /* Constant.swift */; };
+		062BDF611B2AED3100B7F3F8 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062BDF601B2AED3100B7F3F8 /* Action.swift */; };
+		062BDF661B2B20BE00B7F3F8 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062BDF601B2AED3100B7F3F8 /* Action.swift */; };
+		062BDF6C1B2B48A100B7F3F8 /* GoogleAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064847FF1B299B2C00DBAE42 /* GoogleAnalytics.swift */; };
+		062BDF6E1B2B494600B7F3F8 /* GAWatchImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062BDF6D1B2B494600B7F3F8 /* GAWatchImplementation.swift */; };
+		062BDF6F1B2B495700B7F3F8 /* GAWatchImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062BDF6D1B2B494600B7F3F8 /* GAWatchImplementation.swift */; };
+		062BDF761B2B4B9000B7F3F8 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062BDF751B2B4B9000B7F3F8 /* RequestBuilder.swift */; };
+		062BDF771B2B4BCB00B7F3F8 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062BDF751B2B4B9000B7F3F8 /* RequestBuilder.swift */; };
+		062BDF781B2B4BCC00B7F3F8 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062BDF751B2B4B9000B7F3F8 /* RequestBuilder.swift */; };
+		062BDF7F1B2C433600B7F3F8 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062BDF7E1B2C433600B7F3F8 /* Command.swift */; };
+		062BDF801B2C46A500B7F3F8 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062BDF7E1B2C433600B7F3F8 /* Command.swift */; };
+		062BDF811B2C46BA00B7F3F8 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062BDF7E1B2C433600B7F3F8 /* Command.swift */; };
+		062BDF851B2C728E00B7F3F8 /* WatchCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062BDF831B2C728B00B7F3F8 /* WatchCommunicator.swift */; };
 		064847F71B27683400DBAE42 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 064847F61B27683400DBAE42 /* SwiftyJSON.framework */; };
 		064847F81B27683400DBAE42 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 064847F61B27683400DBAE42 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		064847FE1B299AEF00DBAE42 /* QuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064847FD1B299AEF00DBAE42 /* QuoteModel.swift */; };
@@ -102,6 +114,11 @@
 
 /* Begin PBXFileReference section */
 		062BDEFA1B29F47900B7F3F8 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		062BDF601B2AED3100B7F3F8 /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		062BDF6D1B2B494600B7F3F8 /* GAWatchImplementation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GAWatchImplementation.swift; sourceTree = "<group>"; };
+		062BDF751B2B4B9000B7F3F8 /* RequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
+		062BDF7E1B2C433600B7F3F8 /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		062BDF831B2C728B00B7F3F8 /* WatchCommunicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchCommunicator.swift; sourceTree = "<group>"; };
 		064847F61B27683400DBAE42 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		064847FD1B299AEF00DBAE42 /* QuoteModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteModel.swift; sourceTree = "<group>"; };
 		064847FF1B299B2C00DBAE42 /* GoogleAnalytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAnalytics.swift; sourceTree = "<group>"; };
@@ -194,6 +211,8 @@
 		062BDF5F1B2A292B00B7F3F8 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				062BDF791B2B54AC00B7F3F8 /* Common */,
+				062BDF6A1B2B219B00B7F3F8 /* Watch */,
 				062BDEF81B29F24500B7F3F8 /* DataSource */,
 				064848031B299BD600DBAE42 /* Controllers */,
 				064848021B299BBE00DBAE42 /* Providers */,
@@ -204,6 +223,25 @@
 				06647BB11AC5D1B10082DFAB /* GA */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		062BDF6A1B2B219B00B7F3F8 /* Watch */ = {
+			isa = PBXGroup;
+			children = (
+				062BDF6D1B2B494600B7F3F8 /* GAWatchImplementation.swift */,
+				062BDF831B2C728B00B7F3F8 /* WatchCommunicator.swift */,
+			);
+			name = Watch;
+			sourceTree = "<group>";
+		};
+		062BDF791B2B54AC00B7F3F8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				062BDF751B2B4B9000B7F3F8 /* RequestBuilder.swift */,
+				062BDF601B2AED3100B7F3F8 /* Action.swift */,
+				062BDF7E1B2C433600B7F3F8 /* Command.swift */,
+			);
+			name = Common;
 			sourceTree = "<group>";
 		};
 		064847F91B299A4F00DBAE42 /* RedditParser */ = {
@@ -561,16 +599,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				064847FE1B299AEF00DBAE42 /* QuoteModel.swift in Sources */,
+				062BDF611B2AED3100B7F3F8 /* Action.swift in Sources */,
 				062BDEFB1B29F47900B7F3F8 /* Constant.swift in Sources */,
 				06D37C9B1AD0AC1D0056C9ED /* UICollectionFlowLayoutCustom.swift in Sources */,
 				06647BAF1AC37FEF0082DFAB /* RedditProvider.swift in Sources */,
+				062BDF7F1B2C433600B7F3F8 /* Command.swift in Sources */,
 				06D37C991AD07F730056C9ED /* UIColectionViewCellCustom.swift in Sources */,
 				06D37C931AD076A90056C9ED /* UIView+AutoLayout.swift in Sources */,
 				06FF0F371AC36066002E1B21 /* ViewController.swift in Sources */,
 				064848001B299B2C00DBAE42 /* GoogleAnalytics.swift in Sources */,
 				06D37C951AD0780E0056C9ED /* DataSource.swift in Sources */,
 				064848051B29C58500DBAE42 /* RedditParser.swift in Sources */,
+				062BDF761B2B4B9000B7F3F8 /* RequestBuilder.swift in Sources */,
 				06FF0F351AC36066002E1B21 /* AppDelegate.swift in Sources */,
+				062BDF6E1B2B494600B7F3F8 /* GAWatchImplementation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,9 +621,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				064848081B29EE3500DBAE42 /* QuoteModel.swift in Sources */,
+				062BDF661B2B20BE00B7F3F8 /* Action.swift in Sources */,
+				062BDF801B2C46A500B7F3F8 /* Command.swift in Sources */,
 				064848061B29EC2300DBAE42 /* RedditParser.swift in Sources */,
+				062BDF771B2B4BCB00B7F3F8 /* RequestBuilder.swift in Sources */,
+				062BDF6C1B2B48A100B7F3F8 /* GoogleAnalytics.swift in Sources */,
 				06FF0F4B1AC36066002E1B21 /* QuotesTests.swift in Sources */,
 				062BDEFC1B29FC9C00B7F3F8 /* Constant.swift in Sources */,
+				062BDF6F1B2B495700B7F3F8 /* GAWatchImplementation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,9 +638,12 @@
 			files = (
 				062BDEFD1B29FC9C00B7F3F8 /* Constant.swift in Sources */,
 				064848091B29EE3600DBAE42 /* QuoteModel.swift in Sources */,
+				062BDF811B2C46BA00B7F3F8 /* Command.swift in Sources */,
 				06647BAC1AC37AB60082DFAB /* RedditProvider.swift in Sources */,
 				06647BAE1AC37D070082DFAB /* InterfaceController.swift in Sources */,
 				06FF0F601AC36094002E1B21 /* NotificationController.swift in Sources */,
+				062BDF851B2C728E00B7F3F8 /* WatchCommunicator.swift in Sources */,
+				062BDF781B2B4BCC00B7F3F8 /* RequestBuilder.swift in Sources */,
 				064848071B29EC2500DBAE42 /* RedditParser.swift in Sources */,
 				06FF0F621AC36094002E1B21 /* GlanceController.swift in Sources */,
 			);

@@ -14,6 +14,12 @@ class RedditParser {
     class func parserFromJSON(json: AnyObject?) -> Array<QuoteModel> {
 
         var quotes = [QuoteModel]()
+        
+        if json == nil || json?.error != nil {
+            
+            return quotes
+        }
+
         var json = JSON(json!)
         
         let children = json["data"]["children"]

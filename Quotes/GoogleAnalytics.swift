@@ -10,6 +10,9 @@ import Foundation
 
 class GoogleAnalytics {
     
+    // swift singleton :)
+    static let sharedInstance = GoogleAnalytics()
+    
     init () {
         
         GAI.sharedInstance().trackUncaughtExceptions = true

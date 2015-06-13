@@ -93,7 +93,7 @@ class ViewController: GAITrackedViewController {
             
             if error != nil && quotes.count == 0 {
             
-                // create a fake quote
+                // create a fake quote with error message
                 var errorQuote = QuoteModel()
                 errorQuote.title = error!.localizedDescription
                 

@@ -10,10 +10,17 @@ import Foundation
 
 struct Constant {
     
+    struct Parser {
+        
+        static let Sucess = "success"
+        static let Error = "error"
+        static let Action = "action"
+    }
+    
     struct Reddit {
         
         static let URL = "http://www.reddit.com/r/quotes/top.json?sort=top"
-        static let evaluationScore = 50
+        static let evaluationScore = 30
     }
     struct GA {
         
