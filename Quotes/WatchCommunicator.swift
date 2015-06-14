@@ -16,7 +16,7 @@ class WatchCommunicator {
     
     func sendMessageToParent(command: Command) -> Void {
         
-        let message = RequestBuilder().message(command)
+        let message = MessageBuilder.request(command)
         
         [WKInterfaceController.openParentApplication(message as! [String : String],
             reply: { (reply, error) -> Void in

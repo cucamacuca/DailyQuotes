@@ -15,8 +15,9 @@ class GAWatchImplementation: Action {
     
     override func execute(completionHandler: (object: [NSObject : AnyObject]) -> Void) {
         
+        // track watch execution
         GoogleAnalytics.sharedInstance.track(Constant.GA.homeWatchScreen)
         
-        completionHandler(object: [Constant.Parser.Sucess : response])
+        completionHandler(object: MessageBuilder.response(true, message: response))
     }
 }
