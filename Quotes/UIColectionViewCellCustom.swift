@@ -19,26 +19,20 @@ class UICollectionViewCellCustom: UICollectionViewCell {
     override init(frame: CGRect) {
         
         self.quote = UILabel(frame: CGRectZero)
-        self.quote.textColor = UIColor.whiteColor()
-        self.quote.font = UIFont(name: defaultFontName, size: defaultSizeFont)
-        self.quote.textAlignment = NSTextAlignment.Center
-        self.quote.numberOfLines = 0
         
         super.init(frame: frame)
-        
+
+        self.setupLabel()
         self.setupConstraints()
     }
 
     required init(coder aDecoder: NSCoder) {
 
         self.quote = UILabel(frame: CGRectZero)
-        self.quote.textColor = UIColor.whiteColor()
-        self.quote.font = UIFont(name: defaultFontName, size: defaultSizeFont)
-        self.quote.textAlignment = NSTextAlignment.Center
-        self.quote.numberOfLines = 0
-        
+  
         super.init(coder: aDecoder)
         
+        self.setupLabel()
         self.setupConstraints()
     }
     
@@ -49,6 +43,14 @@ class UICollectionViewCellCustom: UICollectionViewCell {
         super.prepareForReuse()
     }
     
+    func setupLabel() {
+        
+        self.quote.textColor = UIColor.whiteColor()
+        self.quote.font = UIFont(name: defaultFontName, size: defaultSizeFont)
+        self.quote.textAlignment = NSTextAlignment.Center
+        self.quote.numberOfLines = 0
+    }
+    
     func setupConstraints() {
 
         self.addSubview(quote)
@@ -56,5 +58,10 @@ class UICollectionViewCellCustom: UICollectionViewCell {
         self.quote.setTranslatesAutoresizingMaskIntoConstraints(false)
         
         self.quote.fillSuperview(UIEdgeInsets(top: 0, left: edgeInset, bottom: 0, right: -edgeInset))
+    }
+    
+    func configure(quote: QuoteModel) -> Void {
+        
+        self.quote.text = quote.title
     }
 }

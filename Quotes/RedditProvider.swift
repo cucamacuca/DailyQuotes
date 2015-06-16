@@ -26,9 +26,17 @@ class RedditProvider: NSObject {
                     jsonObject = JSON(json!)
                 }
                 
-                var quotes = RedditParser.parserFromJSON(jsonObject)
+                let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
                 
-                completionHandler(quotes: quotes, error: error)
+                dispatch_async(dispatch_get_global_queue(priority, 0)) {
+                    
+                    var quotes = RedditParser.parserFromJSON(jsonObject)
+                    
+                    dispatch_async(dispatch_get_main_queue()) {
+                        
+                        completionHandler(quotes: quotes, error: error)
+                    }
+                }
         }
     }
 }

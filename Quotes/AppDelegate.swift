@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         // setup and configure frameworks
-        setupApp()
+        setupFrameworks()
         
         // load the correct root view controller
         loadRootViewController()
@@ -62,7 +62,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
-    func setupApp() {
+    func setupFrameworks() {
         
         analytics = GoogleAnalytics.sharedInstance
     }

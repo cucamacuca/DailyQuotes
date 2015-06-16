@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>CF303203-BDA5-430E-AE0B-7FC23E4FA34D</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Quotes</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>BB6080DAA60F414F0429EDC2EF5AA2BE9B9EA2C6</key>
 		<string>https://github.com/cucamacuca/DailyQuotes.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Quotes.xcodeproj/project.xcworkspace</string>
+	<string>Quotes.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>BB6080DAA60F414F0429EDC2EF5AA2BE9B9EA2C6</key>

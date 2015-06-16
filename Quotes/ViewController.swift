@@ -79,9 +79,11 @@ class ViewController: GAITrackedViewController {
                 
                 (cell, item, indexPath) -> Void in
                 
-                let quote = item as? QuoteModel
-                
-                cell.quote.text = quote?.title
+                if let quote = item as? QuoteModel {
+                    
+                    // configure cell and send quote
+                    cell.configure(quote)
+                }
         })
     }
     
@@ -108,6 +110,6 @@ class ViewController: GAITrackedViewController {
     
     func registerClasses() {
         
-        self.collectionView.registerClass(UICollectionViewCellCustom.self,forCellWithReuseIdentifier:NSStringFromClass(UICollectionViewCellCustom.self))
+        self.collectionView.registerClass(UICollectionViewCellCustom.self, forCellWithReuseIdentifier:NSStringFromClass(UICollectionViewCellCustom.self))
     }
 }

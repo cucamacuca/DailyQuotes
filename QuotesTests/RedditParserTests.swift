@@ -32,6 +32,9 @@ class RedditParserTests: XCTestCase {
     
     override func tearDown() {
         
+        self.json = nil
+        self.model = []
+        
         super.tearDown()
     }
     

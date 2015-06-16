@@ -31,9 +31,9 @@ class Action: NSObject {
             default: return Action()
         }
     }
-
+    
     func execute(completionHandler: (object: [NSObject : AnyObject]) -> Void) {
         
-        // to be overriden
+        // to be implemented
     }
 }
