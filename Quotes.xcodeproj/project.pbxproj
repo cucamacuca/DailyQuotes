@@ -44,6 +44,12 @@
 		06647BC31AC5D2970082DFAB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06647BC21AC5D2970082DFAB /* SystemConfiguration.framework */; };
 		06647BC51AC5D2A20082DFAB /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 06647BC41AC5D2A20082DFAB /* libz.dylib */; };
 		06647BC71AC5D2B80082DFAB /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 06647BC61AC5D2B80082DFAB /* libsqlite3.dylib */; };
+		0680BE081B72642000D91C47 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 062137B11B6E319C002013EE /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0680BE0A1B72642500D91C47 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 062137A21B6E3195002013EE /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0680BE0C1B72656900D91C47 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 062137B11B6E319C002013EE /* SwiftyJSON.framework */; };
+		0680BE0D1B72656900D91C47 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 062137B11B6E319C002013EE /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0680BE111B72657200D91C47 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 062137A21B6E3195002013EE /* Alamofire.framework */; };
+		0680BE121B72657200D91C47 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 062137A21B6E3195002013EE /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		06BEFEBA1AC75BF1009D78D6 /* libAdIdAccess.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06BEFEB81AC75BF1009D78D6 /* libAdIdAccess.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		06BEFEBB1AC75BF1009D78D6 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06BEFEB91AC75BF1009D78D6 /* libGoogleAnalyticsServices.a */; };
 		06D37C931AD076A90056C9ED /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D37C921AD076A90056C9ED /* UIView+AutoLayout.swift */; };
@@ -149,6 +155,20 @@
 			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
 			remoteInfo = "Alamofire iOS";
 		};
+		0680BE0E1B72656900D91C47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 062137A91B6E319C002013EE /* SwiftyJSON.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E4FEFDA19575BE100351305;
+			remoteInfo = "SwiftyJSON iOS";
+		};
+		0680BE131B72657200D91C47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0621379A1B6E3195002013EE /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
 		06FF0F451AC36066002E1B21 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 06FF0F271AC36066002E1B21 /* Project object */;
@@ -179,6 +199,20 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				0680BE0A1B72642500D91C47 /* Alamofire.framework in Embed Frameworks */,
+				0680BE081B72642000D91C47 /* SwiftyJSON.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0680BE101B72656900D91C47 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0680BE0D1B72656900D91C47 /* SwiftyJSON.framework in Embed Frameworks */,
+				0680BE121B72657200D91C47 /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +308,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0680BE0C1B72656900D91C47 /* SwiftyJSON.framework in Frameworks */,
+				0680BE111B72657200D91C47 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,6 +630,7 @@
 				06FF0F541AC36094002E1B21 /* Sources */,
 				06FF0F551AC36094002E1B21 /* Frameworks */,
 				06FF0F561AC36094002E1B21 /* Resources */,
+				0680BE101B72656900D91C47 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -601,6 +638,8 @@
 				062137BF1B6E3253002013EE /* PBXTargetDependency */,
 				062137BD1B6E324F002013EE /* PBXTargetDependency */,
 				06FF0F6A1AC36094002E1B21 /* PBXTargetDependency */,
+				0680BE0F1B72656900D91C47 /* PBXTargetDependency */,
+				0680BE141B72657200D91C47 /* PBXTargetDependency */,
 			);
 			name = "Quotes WatchKit Extension";
 			productName = "Quotes WatchKit Extension";
@@ -857,6 +896,16 @@
 			name = "Alamofire iOS";
 			targetProxy = 062137BE1B6E3253002013EE /* PBXContainerItemProxy */;
 		};
+		0680BE0F1B72656900D91C47 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SwiftyJSON iOS";
+			targetProxy = 0680BE0E1B72656900D91C47 /* PBXContainerItemProxy */;
+		};
+		0680BE141B72657200D91C47 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire iOS";
+			targetProxy = 0680BE131B72657200D91C47 /* PBXContainerItemProxy */;
+		};
 		06FF0F461AC36066002E1B21 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 06FF0F2E1AC36066002E1B21 /* Quotes */;
@@ -911,7 +960,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Rui Pereira (38HE838UDE)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -930,10 +979,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "dc5c9ddf-ed0e-4129-884b-bdf227387624";
+				PROVISIONING_PROFILE = "37f5fe6d-e615-4703-b3f5-a8efe24c77d4";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -957,7 +1006,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Rui Pereira (753Q5N89CP)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -970,9 +1019,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "dc5c9ddf-ed0e-4129-884b-bdf227387624";
+				PROVISIONING_PROFILE = "58a280eb-7707-4bf2-ae15-8f90c48581e5";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -983,13 +1032,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Rui Pereira (38HE838UDE)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Rui Pereira (38HE838UDE)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Quotes/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -998,7 +1046,7 @@
 				);
 				MACH_O_TYPE = mh_execute;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0bb950de-afd2-4477-9dff-47b1ae4e4d43";
+				PROVISIONING_PROFILE = "37f5fe6d-e615-4703-b3f5-a8efe24c77d4";
 				SWIFT_OBJC_BRIDGING_HEADER = "Quotes/GA/GA-Bridging-Header.h";
 			};
 			name = Debug;
@@ -1007,12 +1055,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Rui Pereira (753Q5N89CP)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Rui Pereira (753Q5N89CP)";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Quotes/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1022,7 +1069,7 @@
 				MACH_O_TYPE = mh_execute;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "dd8cf02e-6e05-497f-8845-34ce66f4cebd";
+				PROVISIONING_PROFILE = "58a280eb-7707-4bf2-ae15-8f90c48581e5";
 				SWIFT_OBJC_BRIDGING_HEADER = "Quotes/GA/GA-Bridging-Header.h";
 			};
 			name = Release;
@@ -1042,6 +1089,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = QuotesTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/Quotes/GA",
@@ -1065,6 +1113,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = QuotesTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/Quotes/GA",
@@ -1082,8 +1131,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Rui Pereira (753Q5N89CP)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Rui Pereira (753Q5N89CP)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1094,7 +1143,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4257e44a-74e5-40b2-8e14-12c31ec3faf1";
+				PROVISIONING_PROFILE = "37f5fe6d-e615-4703-b3f5-a8efe24c77d4";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
@@ -1114,7 +1163,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4257e44a-74e5-40b2-8e14-12c31ec3faf1";
+				PROVISIONING_PROFILE = "58a280eb-7707-4bf2-ae15-8f90c48581e5";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
@@ -1124,22 +1173,23 @@
 		06FF0F7A1AC36095002E1B21 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Rui Pereira (38HE838UDE)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Rui Pereira (38HE838UDE)";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Quotes WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Quotes/GA",
 				);
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "4257e44a-74e5-40b2-8e14-12c31ec3faf1";
+				PROVISIONING_PROFILE = "37f5fe6d-e615-4703-b3f5-a8efe24c77d4";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -1149,9 +1199,10 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Rui Pereira (753Q5N89CP)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Rui Pereira (753Q5N89CP)";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Quotes WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1159,7 +1210,7 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "4257e44a-74e5-40b2-8e14-12c31ec3faf1";
+				PROVISIONING_PROFILE = "58a280eb-7707-4bf2-ae15-8f90c48581e5";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
