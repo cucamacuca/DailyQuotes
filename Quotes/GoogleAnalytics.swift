@@ -25,7 +25,7 @@ class GoogleAnalytics {
     
         var tracker:GAITracker = GAI.sharedInstance().defaultTracker as GAITracker
     
-        tracker.allowIDFACollection = true
+        tracker.allowIDFACollection = false
         tracker.set(kGAIScreenName, value:screen)
         tracker.send(GAIDictionaryBuilder.createScreenView().build() as [NSObject : AnyObject])
     }

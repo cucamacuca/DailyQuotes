@@ -1,3 +1,3 @@
-github "Alamofire/Alamofire" "1.2.2"
+github "Alamofire/Alamofire" "1.3.0"
 github "ArtSabintsev/PrintlnMagic" "1.2.1"
-github "SwiftyJSON/SwiftyJSON" "2.2.0"
+github "SwiftyJSON/SwiftyJSON" "2.2.1"
