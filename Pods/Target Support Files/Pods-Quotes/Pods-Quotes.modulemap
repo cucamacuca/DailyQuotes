@@ -1,0 +1,6 @@
+framework module Pods_Quotes {
+  umbrella header "Pods-Quotes-umbrella.h"
+
+  export *
+  module * { export * }
+}
