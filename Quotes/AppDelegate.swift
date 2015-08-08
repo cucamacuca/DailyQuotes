@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -64,6 +66,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func setupFrameworks() {
         
+        Fabric.with([Crashlytics()])
         analytics = GoogleAnalytics.sharedInstance
     }
     
