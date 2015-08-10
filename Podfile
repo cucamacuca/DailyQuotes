@@ -9,7 +9,7 @@ xcodeproj 'Quotes.xcodeproj'
 target :Quotes do
   pod 'Fabric'
   pod 'Crashlytics'
-  pod 'Alamofire', '~> 1.2'
+  pod 'Alamofire', '~> 1.3'
   pod 'SwiftyJSON', '~> 2.2'
 end
 
