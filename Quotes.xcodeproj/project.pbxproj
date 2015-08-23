@@ -55,8 +55,6 @@
 		06FF0F3C1AC36066002E1B21 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06FF0F3B1AC36066002E1B21 /* Images.xcassets */; };
 		06FF0F3F1AC36066002E1B21 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06FF0F3D1AC36066002E1B21 /* LaunchScreen.xib */; };
 		06FF0F4B1AC36066002E1B21 /* RedditParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FF0F4A1AC36066002E1B21 /* RedditParserTests.swift */; };
-		06FF0F601AC36094002E1B21 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FF0F5F1AC36094002E1B21 /* NotificationController.swift */; };
-		06FF0F621AC36094002E1B21 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FF0F611AC36094002E1B21 /* GlanceController.swift */; };
 		06FF0F641AC36094002E1B21 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06FF0F631AC36094002E1B21 /* Images.xcassets */; };
 		06FF0F681AC36094002E1B21 /* Quotes WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 06FF0F671AC36094002E1B21 /* Quotes WatchKit App.app */; };
 		06FF0F701AC36094002E1B21 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06FF0F6E1AC36094002E1B21 /* Interface.storyboard */; };
@@ -160,8 +158,6 @@
 		06FF0F5B1AC36094002E1B21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06FF0F5C1AC36094002E1B21 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		06FF0F5D1AC36094002E1B21 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
-		06FF0F5F1AC36094002E1B21 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		06FF0F611AC36094002E1B21 /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
 		06FF0F631AC36094002E1B21 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		06FF0F671AC36094002E1B21 /* Quotes WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quotes WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06FF0F6D1AC36094002E1B21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -422,8 +418,6 @@
 			isa = PBXGroup;
 			children = (
 				06FF0F5D1AC36094002E1B21 /* InterfaceController.swift */,
-				06FF0F5F1AC36094002E1B21 /* NotificationController.swift */,
-				06FF0F611AC36094002E1B21 /* GlanceController.swift */,
 				06FF0F631AC36094002E1B21 /* Images.xcassets */,
 				06FF0F5A1AC36094002E1B21 /* Supporting Files */,
 			);
@@ -555,6 +549,7 @@
 		06FF0F271AC36066002E1B21 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = SmoothPursuit;
 				TargetAttributes = {
@@ -776,11 +771,9 @@
 				062BDF811B2C46BA00B7F3F8 /* Command.swift in Sources */,
 				06647BAC1AC37AB60082DFAB /* RedditProvider.swift in Sources */,
 				06647BAE1AC37D070082DFAB /* InterfaceController.swift in Sources */,
-				06FF0F601AC36094002E1B21 /* NotificationController.swift in Sources */,
 				062BDF851B2C728E00B7F3F8 /* WatchCommunicator.swift in Sources */,
 				062BDF781B2B4BCC00B7F3F8 /* MessageBuilder.swift in Sources */,
 				064848071B29EC2500DBAE42 /* RedditParser.swift in Sources */,
-				06FF0F621AC36094002E1B21 /* GlanceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -916,7 +909,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Rui Pereira (38HE838UDE)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Rui Pereira (38HE838UDE)";
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -942,7 +935,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Rui Pereira (753Q5N89CP)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Rui Pereira (753Q5N89CP)";
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Quotes/Info.plist;
@@ -1063,7 +1056,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9012A927873326661C88BD4E /* Pods-Quotes WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Rui Pereira (38HE838UDE)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Rui Pereira (38HE838UDE)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -1088,7 +1081,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E5AD1545A13AF0FDAB2858E6 /* Pods-Quotes WatchKit Extension.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Rui Pereira (753Q5N89CP)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Rui Pereira (753Q5N89CP)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
