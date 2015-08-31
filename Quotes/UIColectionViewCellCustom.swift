@@ -49,6 +49,8 @@ class UICollectionViewCellCustom: UICollectionViewCell {
         self.quote.font = UIFont(name: defaultFontName, size: defaultSizeFont)
         self.quote.textAlignment = NSTextAlignment.Center
         self.quote.numberOfLines = 0
+        self.quote.minimumScaleFactor = 0.5;
+        self.quote.adjustsFontSizeToFitWidth = true
     }
     
     func setupConstraints() {
@@ -57,11 +59,12 @@ class UICollectionViewCellCustom: UICollectionViewCell {
         self.setTranslatesAutoresizingMaskIntoConstraints(false)
         self.quote.setTranslatesAutoresizingMaskIntoConstraints(false)
         
-        self.quote.fillSuperview(UIEdgeInsets(top: 0, left: edgeInset, bottom: 0, right: -edgeInset))
+        self.quote.fillSuperview(UIEdgeInsets(top: 10, left: edgeInset, bottom: 10, right: -edgeInset))
     }
     
     func configure(quote: QuoteModel) -> Void {
         
         self.quote.text = quote.title
+        self.quote.sizeToFit()
     }
 }

@@ -10,7 +10,7 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Quotes_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label width="140" height="150" alignment="center" verticalAlignment="center" textAlignment="center" numberOfLines="0" id="muS-dc-78o">
+                        <label width="140" alignment="center" verticalAlignment="center" textAlignment="center" numberOfLines="0" id="muS-dc-78o">
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="font" type="system" weight="thin" pointSize="16"/>
                         </label>
